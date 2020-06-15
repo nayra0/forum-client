@@ -1,0 +1,15 @@
+<ma-tabela-topico 
+    [topicos]="topicos">
+</ma-tabela-topico>
+
+<div class="text-center">
+    <ma-page-prev 
+        (click)="prevPage()"
+        [disabled]="!currentPage">
+    </ma-page-prev>
+    Página {{currentPage+1}}
+    <ma-page-next 
+        (click)="nextPage()"
+        [disabled]="!(totalPages-currentPage-1)">
+    </ma-page-next>    
+</div>

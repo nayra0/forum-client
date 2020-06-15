@@ -1,0 +1,29 @@
+<div class="container">
+  <table class="table mt-3">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Título</th>
+          <th scope="col">Mensagem</th>
+          <th scope="col">Data de Criação</th>
+          <th scope="col">Curso</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr *ngFor="let topico of topicos">
+          <td>{{topico.id}}</td>
+          <td>{{topico.titulo}}</td>
+          <td>{{topico.mensagem}}</td>
+          <td>{{topico.dataCriacao}}</td>
+          <td>{{topico.nomeCurso}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p class="text-center text-muted" *ngIf="!topicos.length">
+      Não há registros
+    </p>
+</div>
+  
+  
